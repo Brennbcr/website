@@ -1,0 +1,91 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color:  #0d378d;
+    --background-color: #e7ded4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 150%;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 88px;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 680;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+/* Section 1: Introduction */
+
+.introduction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    gap: 40px;
+   }
+   
+   .introduction .text {
+       flex: 5;
+   }
+   
+   .introduction .text .links {
+       
+   }
+   
+   .introduction .text .links a {
+       display: inline-block;
+       padding: 3px 15px;
+       border: 2px solid var(--link-color);
+       border-radius: 5px;
+   }
+   
+   
+   @media (max-width: 600px) {
+   
+       /* navbar */
+   
+       nav {
+           padding: 0 20px; 
+       }
+   
+       nav .right{
+           font-size: 25px;
+       }
+   
+       nav .right a span {
+           display: none;
+       }
+   
+   }
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Brennan Becerra</title>
+</head>
+<body>
+  <!-- NAVBAR -->  
+   <nav>
+    <div class="left">
+       <a href="/">Brennan Becerra</a> 
+    </div>
+    <div class="right">
+        
+        <a href="https://www.linkedin.com/in/brennan-becerra-1674281aa/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:brennanbecerra@gmail.com">
+            <i class="fa-solid fa-at"></i>
+            <span>Email</span>
+        </a>
+
+    </div>
+   </nav>
+
+   <main>
+
+   
+        
+    
+
+    <!-- SECTION 1: Introduction -->
+     <section class="introduction">
+        <div class="text">
+            <img src="images/bren.jpeg" width="200" alt="">
+            <h2>Hi, I'm Bren!</h2>
+            <p>I graduated with a BS in mathematics from Boise State University in May 2025, and will be continuing my education at the University of Bonn, for my Masters degree, in October 2026. I am broadly interested in solving methods for hyperbolic and elliptic PDEs, applied analysis and formalized mathematical programming. My research experience includes investigating solutions to the Euler-Poisson system involving sticky particles, and Adaptive Mesh Refinement threshold techniques.</p>
+            <p></p>
+            <p><b>Research Interests:</b> Applied Analysis; Approximation methods for PDE's; Formalized Mathematics; Mathematics Education</p>
+        </div>
+     </section>
+
+     <!-- SECTION 2: Skills -->
+     <section id="skills">
+
+        <h2>Skills</h2>
+        <div class="text">
+            <p>
+                <b>Programming:</b> Lean, Python (NumPy, SciPy, Matplotlib), R, SQL <br>
+                <b>Typesetting: </b> LaTeX, Markdown, HTML <br>
+                <b>Technical: </b> Mathematical writing, Proofs, Data Science, Mathematical Modeling
+            </p>
+        </div>
+
+     </section>
+
+      <!-- SECTION 3: Research -->
+      <section id="research"></section>
+        <h2>Research</h2>
+
+        <b>West Virginia University | Morgantown, WV, Mentor: Adrian Tudorascu</b>
+        <div style="display: flex; justify-content: space-between;">
+            <span><a href="https://mathanddata.wvu.edu/applied-analysis-reu">Applied Analysis REU</a></span>
+            <time>June 2024- July 2024</time> 
+        </div>
+
+        <p>Investigated conditions for compact-support and asymptotic behavior of a particle collision model. Developed a Python script to simulate mass trajectories and visualize the Wasserstein metric.</p>
+        <p>
+            The attractive pressureless Euler-Poisson system describes the evolution of a mass distribution with an initial velocity and gravitational potential. 
+        </p>
+
+        <p>
+            $$
+            \begin{align}
+            \begin{cases}
+            \partial _{t}\rho + \partial _{y}(\rho v)  =0 \\
+            \partial _{t}(\rho v)+ \partial _{y}(\rho v^{2})  = -\frac{1}{2}(\text{sgn}* \rho)\rho
+            \end{cases}  &  & \text{ where } &  &  \text{sgn}(y)= \begin{cases}
+            -1 & y<0 \\
+            0 & y=0 \\
+            1 & y>0.
+            \end{cases}
+            \end{align}
+            $$
+        </p>
+
+        <p>The study of Sticky Particles solutions (SPS) involves the interaction of point masses undergoing inelastic collisions, hence forming a new particle whose mass equals the sum of all collided particles. The state of the system at time \( t \geq 0 \) is described by \( \psi _{i,t}=(m_{i},y_{i,t},v_{i,t}) \) where \( y_{i,t}=y_{i+1,t} \) corresponds to a pair of already-collided particles.</p>
+<br>
+        <center>
+            <img src="images/particle trajectories.png" width="450">
+        </center>
+
+    <br>
+        <b>Boise State University | Boise, ID, Mentor: Michal Kopera</b>
+        <div style="display: flex; justify-content: space-between;">
+            <span>Adaptive Mesh Refinement Criteria Research</span>
+            <time>August 2024 - May 2025</time>
+        </div>
+
+        <p>Developed a Python script to assess the accuracy of an AMR approximation model for the 1D advection equation. </p>
+        
+        <p>Adaptive Mesh Refinement (AMR) is a numerical approximation method used in computational simulations. Here, only specific regions of interest use higher resolution, while compensating for accuracy in other regions.</p>
+        <p>We study AMR solutions to the 1D advection equation described by </p>
+
+        <p>
+            $$
+            \begin{align}
+            \frac{ \partial u }{ \partial t } = -v \frac{ \partial u }{ \partial x } ,  &  & \text{ where } u=u(x,t), x \in [-1,1] \text{ and }t \in [0,1].
+            \end{align} 
+            $$
+        </p>
+
+        <p>
+            We approximate \(u\) over a hierarchical grid subdivided into cells \(C_{k_{b}}\) and call that approximation \( u_{\text{apx}}\). Our study consisted of two criteria for refinement, 
+        </p>
+
+        <p>
+            $$
+            \begin{align}
+            S_{1}= \max \{ u(x) : x \in C_{k_{b}} \} &  & S_{2}= \frac{\max \{ \text{jump_left}, \text{jump_right} \}}{\text{avg_jump} + \varepsilon}
+            \end{align}
+            $$
+        </p>
+
+        <br>
+        <center>
+            <img src="images/Refinement Criteria.png" width="600" alt="">
+        </center>
+
+        <p>a threshold value \(c\), and an operating script.</p>
+
+
+        <p>
+            $$
+            \begin{align}
+            &S_{n}\geq c \implies \text{refine } C_{k_{b}} \\
+            &S_{n}< c \implies \text{coarsen } C_{k_{b}}\text{ or do nothing.}
+            \end{align}
+            $$
+        </p>
+       
+        <p>After running \(u_{\text{apx}}\) through \(t \in [0,1]\), we evaluate the accuracy via \(L^{2}=\|u(1)-u_{\text{apx}}(1)\|^{2}\) and taking into account the average total number of cells used in the entire simulation. </p>
+
+        <img src="images/Results.png" alt="">
+
+       <!-- SECTION 4: Reading group -->
+     <section id="reading group"></section>
+
+     <h2>Reading Groups</h2>
+     
+     <div style="display: flex; justify-content: space-between;">
+        <span><b>Mathematics in Lean Reading group</b></span>
+        <time>April 2026</time>
+    </div>
+    <a href="https://discord.gg/nXgZasFZC6">Discord</a>
+     <p>Presently, I am leading a reading group for the Lean programming langauge. We will be working through the <a href="https://leanprover-community.github.io/mathematics_in_lean/"> official documentation</a> and using exercises from the <a href="https://adam.math.hhu.de/">Lean Game Server</a>. Feel free to join by clicking the discord link above!</p>
+
+     <!-- Section 5: Publications -->
+      <section id="publications"></section>
+
+      <h2>Publication</h2>
+
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022247X25003348"><i>Sticky particles solutions for the attractive pressureless Euler-Poisson system; a projection formula and asymptotic behavior,</i></a> <b>Journal of Mathematical Analysis and Applications,</b> Volume 550, Issue 2
+
+      <!-- Section 6: Contact -->
+     <section id="contacct"></section>
+
+
+   </main>
+
+</body>
+</html>
